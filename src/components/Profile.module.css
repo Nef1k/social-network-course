@@ -1,0 +1,17 @@
+.content {
+    background: cornflowerblue;
+
+    grid-area: c;
+}
+
+.content img {
+    width: 100%;
+}
+
+.posts {
+
+}
+
+.item {
+
+}

@@ -1,5 +1,5 @@
 .app-wrapper {
-    width: 1080px;
+    width: 1200px;
     margin: 0 auto;
 
     display: grid;
@@ -9,32 +9,4 @@
     grid-template-areas:
         "h h"
         "n c";
-}
-
-.header {
-    background: darkcyan;
-
-    grid-area: h;
-}
-
-.header img {
-    margin-left: 5px;
-    margin-top: 5px;
-    height: 50px;
-}
-
-.nav {
-    background: green;
-
-    grid-area: n;
-}
-
-.content {
-    background: blue;
-
-    grid-area: c;
-}
-
-.content img {
-    width: 100%;
 }

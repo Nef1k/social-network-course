@@ -1,0 +1,23 @@
+.nav {
+    background-color: burlywood;
+
+    grid-area: n;
+}
+
+.item {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item a:hover {
+    color: lightgray;
+}
+
+.active a {
+    text-shadow: black 0 0 3px;
+}
