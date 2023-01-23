@@ -1,7 +1,32 @@
 .header {
-    background: darkcyan;
+    background: #3ca2e0;
 
     grid-area: h;
+    height: 60px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.left span {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.right {
+    color: white;
 }
 
 .header img {

@@ -1,4 +1,6 @@
 .post {
+    margin-top: 10px;
+    background: white;
     display: flex;
     align-items: center;
     padding: 10px;

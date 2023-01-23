@@ -5,18 +5,20 @@ import MyPosts from "./MyPosts/MyPosts";
 const Profile = () => {
   return (
     <div className={s.content}>
-      <div>
+      <div className={s.userInfo}>
+        <img src="https://i.imgur.com/7MRSU4k.png" alt="Background" className={s.background}/>
         <img
-          src="https://i.imgur.com/xQliSNh.png"
-          alt="Background"/>
+          src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
+          alt="Avatar"
+          className={s.avatar}
+        />
+        <div className={s.info}>
+          <h1>James Salivan</h1>
+        </div>
       </div>
-      <div>
-        ava + description
-        {/*<img*/}
-        {/*  src="https://cdn.vox-cdn.com/thumbor/m8BU53wkSiPuTtrPtexjVJYpdSk=/0x0:1980x1320/1400x1050/filters:focal(1141x290:1457x606):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/71757363/avatar6.0.jpg"*/}
-        {/*  alt="Avatar"/>*/}
+      <div className={s.posts}>
+        <MyPosts/>
       </div>
-      <MyPosts />
     </div>
   );
 }

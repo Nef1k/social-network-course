@@ -1,23 +1,41 @@
 .nav {
-    background-color: burlywood;
+    background-color: white;
 
     grid-area: n;
+
+    float: left;
+    width: 30%;
 }
 
 .item {
-    margin-top: 10px;
-    margin-left: 10px;
+    border-bottom: 1px solid #ebeae6;
+    padding: 20px;
+}
+.item:last-of-type {
+    border-bottom: 0;
 }
 
 .item a {
-    color: white;
+    color: #89817f;
     text-decoration: none;
+    margin-left: 5px;
 }
 
-.item a:hover {
-    color: lightgray;
+.item:hover {
+    background: #f8f7f5 !important;
+    border-left: 5px solid #3ca2e0;
+    cursor: pointer;
+}
+
+.item:hover a {
+    margin-left: 0;
+}
+
+.active {
+    background: #f8f7f5 !important;
+    border-left: 5px solid #3ca2e0;
 }
 
 .active a {
-    text-shadow: black 0 0 3px;
+    margin-left: 0;
 }

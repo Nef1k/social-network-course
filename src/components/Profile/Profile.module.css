@@ -1,9 +1,45 @@
 .content {
-    background: cornflowerblue;
+    background: white;
+    height: 240px;
 
+    float: left;
+    width: 68%;
+    margin-left: 2%;
+}
+
+.wrapper {
     grid-area: c;
 }
 
-.content img {
+.background {
     width: 100%;
+}
+
+.userInfo {
+    background: white;
+}
+
+.userInfo img {
+    height: 140px;
+}
+
+.avatar {
+    display: block;
+    margin-top: -80px;
+    margin-left: 40px;
+    width: 160px !important;
+    height: 160px !important;
+    border-radius: 80px;
+    border: 3px solid white;
+}
+
+.info {
+    color: #444;
+    margin-top: -80px;
+    margin-left: 220px;
+    margin-bottom: 30px;
+}
+
+.posts {
+    margin-top: 60px;
 }
