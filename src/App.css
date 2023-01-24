@@ -5,12 +5,13 @@
 .content-wrapper {
     width: 1200px;
     margin: 10px auto 0;
+}
 
-    /*display: grid;*/
+.content {
+    background: white;
+    height: 240px;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 3fr 9fr;*/
-    /*grid-template-areas:*/
-    /*    "n c";*/
-    /*grid-gap: 10px;*/
+    float: left;
+    width: 68%;
+    margin-left: 2%;
 }

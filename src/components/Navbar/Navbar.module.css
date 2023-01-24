@@ -9,13 +9,14 @@
 
 .item {
     border-bottom: 1px solid #ebeae6;
-    padding: 20px;
 }
 .item:last-of-type {
     border-bottom: 0;
 }
 
 .item a {
+    display: block;
+    padding: 20px;
     color: #89817f;
     text-decoration: none;
     margin-left: 5px;

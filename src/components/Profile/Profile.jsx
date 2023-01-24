@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = () => {
   return (
-    <div className={s.content}>
+    <div>
       <div className={s.userInfo}>
         <img src="https://i.imgur.com/7MRSU4k.png" alt="Background" className={s.background}/>
         <img
