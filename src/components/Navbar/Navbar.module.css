@@ -19,24 +19,16 @@
     padding: 20px;
     color: #89817f;
     text-decoration: none;
-    margin-left: 5px;
 }
 
-.item:hover {
+.item a:hover {
     background: #f8f7f5 !important;
     border-left: 5px solid #3ca2e0;
     cursor: pointer;
-}
-
-.item:hover a {
     margin-left: 0;
 }
 
 .active {
     background: #f8f7f5 !important;
     border-left: 5px solid #3ca2e0;
-}
-
-.active a {
-    margin-left: 0;
 }
