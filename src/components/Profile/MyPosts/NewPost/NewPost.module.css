@@ -5,7 +5,7 @@
 
 .newPost textarea {
     flex-grow: 1;
-    border: 1px solid #ebeae6;
+
     resize: vertical;
     height: 50px;
     padding: 15px;
@@ -15,12 +15,6 @@
 .newPost button {
     width: 100px;
     margin-right: 20px;
-
-    background-color: #5bc0de;
-    border: 1px solid #46b8da;
-
-    color: white;
-    padding: 5px;
 }
 
 .controls {

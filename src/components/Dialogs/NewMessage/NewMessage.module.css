@@ -1,0 +1,21 @@
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: end;
+    align-self: stretch;
+}
+
+.wrapper textarea {
+    flex-grow: 1;
+
+    resize: none;
+    align-self: stretch;
+
+    min-height: 70px;
+}
+
+.wrapper button {
+    margin-top: 10px;
+}

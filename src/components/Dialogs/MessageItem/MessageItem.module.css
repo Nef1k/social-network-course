@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.wrapper:last-of-type {
+    margin-top: 0;
+}
+
+.imageWrapper img{
+    width: 50px;
+    height: 50px;
+}
+
+.messageWrapper{
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.timeWrapper {
+    font-size: 9pt;
+    color: #666;
+}

@@ -9,7 +9,7 @@
 
 .content {
     background: white;
-    height: 240px;
+    min-height: 240px;
 
     float: left;
     width: 68%;
