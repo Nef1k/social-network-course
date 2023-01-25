@@ -1,0 +1,45 @@
+.dialogs {
+    display: flex;
+}
+
+.dialogItems {
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    max-height: 800px;
+}
+
+.dialogItems>div {
+    border-bottom: 1px solid #ebeae6;
+}
+
+.dialogItems>div:last-of-type {
+    border: 0;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.messageItems {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-grow: 1;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    padding: 20px;
+}
+
+.newMessageWrapper {
+    height: 60px;
+    background: #f8f7f5;
+    padding: 20px;
+    align-self: stretch;
+}

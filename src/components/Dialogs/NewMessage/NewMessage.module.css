@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+
+    align-items: end;
+    align-self: stretch;
+}
+
+.wrapper textarea {
+    flex-grow: 1;
+
+    resize: none;
+    justify-self: stretch;
+}
+
+.wrapper button {
+    margin-left: 10px;
+}
