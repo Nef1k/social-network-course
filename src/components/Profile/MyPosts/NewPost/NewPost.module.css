@@ -1,6 +1,10 @@
 .newPost {
     display: flex;
     flex-direction: column;
+
+    margin-top: 10px;
+
+    border: 1px solid #ebeae6;
 }
 
 .newPost textarea {

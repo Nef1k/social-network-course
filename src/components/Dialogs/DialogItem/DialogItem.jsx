@@ -9,7 +9,7 @@ const DialogItem = (props) => {
         <img src={props.imgSrc} alt=""/>
       </div>
       <div className={s.name}>
-        {props.name} {props.lastName}
+        {props.firstName} {props.lastName}
       </div>
     </StyledNavLink>
   );

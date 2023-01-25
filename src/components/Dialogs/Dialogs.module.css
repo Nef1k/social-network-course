@@ -1,5 +1,7 @@
 .dialogs {
     display: flex;
+
+    background: white;
 }
 
 .dialogItems {
