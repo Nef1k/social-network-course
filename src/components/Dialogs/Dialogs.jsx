@@ -9,13 +9,13 @@ const Dialogs = (props) => {
   return (
     <div className={s.dialogs}>
       <div className={s.dialogItems}>
-        {props.dialogs.map((dialog =>
+        {props.messages.dialogs.map((dialog =>
           <DialogItem dialog={dialog} />
         ))}
       </div>
       <div className={s.messages}>
         <div className={s.messageItems}>
-          {props.messages.map((message =>
+          {props.messages.messages.map((message =>
             <MessageItem message={message} />
           ))}
         </div>

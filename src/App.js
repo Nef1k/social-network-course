@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Friends from "./components/Friends/Friends";
 
 const App = (props) => {
   return (
@@ -11,11 +12,20 @@ const App = (props) => {
       <div className="app-wrapper">
         <Header/>
         <div className="content-wrapper">
-          <Navbar/>
+          <div className="sidebar">
+            <Navbar/>
+            <Friends friends={props.state.common.friends} />
+          </div>
           <div className="content">
             <Routes>
-              <Route path="/" element={<Profile posts={props.posts} />}/>
-              <Route path="/dialogs*" element={<Dialogs dialogs={props.dialogs} messages={props.messages} />}/>
+              <Route
+                path="/"
+                element={<Profile profile={props.state.profilePage} />}
+              />
+              <Route
+                path="/dialogs*"
+                element={<Dialogs messages={props.state.dialogsPage} />}
+              />
             </Routes>
           </div>
         </div>

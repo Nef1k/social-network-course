@@ -1,0 +1,16 @@
+.friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.friend img {
+    width: 60px;
+    border-radius: 30px;
+}
+
+.friend span {
+    margin-top: 5px;
+}

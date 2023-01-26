@@ -3,14 +3,19 @@
 }
 
 .content-wrapper {
+    display: flex;
     width: 1000px;
-    margin: 10px auto 0;
+    margin: 20px auto auto;
 }
 
 .content {
     min-height: 240px;
+    flex-grow: 1;
+    margin-left: 20px;
+}
 
-    float: left;
-    width: 78%;
-    margin-left: 2%;
+.sidebar {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
 }
