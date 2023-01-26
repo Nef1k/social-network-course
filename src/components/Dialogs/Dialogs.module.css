@@ -1,5 +1,7 @@
 .dialogs {
     display: flex;
+
+    background: white;
 }
 
 .dialogItems {
@@ -35,11 +37,13 @@
     overflow-y: scroll;
 
     padding: 20px;
+
+    max-height: 800px;
 }
 
 .newMessageWrapper {
-    height: 60px;
+    min-height: 60px;
     background: #f8f7f5;
-    padding: 20px;
     align-self: stretch;
+    border: 1px solid #ebeae6;
 }

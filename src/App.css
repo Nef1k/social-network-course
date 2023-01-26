@@ -3,15 +3,14 @@
 }
 
 .content-wrapper {
-    width: 1200px;
+    width: 1000px;
     margin: 10px auto 0;
 }
 
 .content {
-    background: white;
     min-height: 240px;
 
     float: left;
-    width: 68%;
+    width: 78%;
     margin-left: 2%;
 }

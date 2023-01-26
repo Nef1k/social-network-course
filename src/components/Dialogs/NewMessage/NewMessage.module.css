@@ -1,7 +1,9 @@
 .wrapper {
+    height: 100%;
     display: flex;
+    flex-direction: column;
 
-    align-items: end;
+    align-items: flex-end;
     align-self: stretch;
 }
 
@@ -9,9 +11,11 @@
     flex-grow: 1;
 
     resize: none;
-    justify-self: stretch;
+    align-self: stretch;
+
+    min-height: 70px;
 }
 
 .wrapper button {
-    margin-left: 10px;
+    margin: 10px;
 }
