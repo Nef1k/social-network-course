@@ -9,7 +9,7 @@ const Friends = (props) => {
       <h2>Friends</h2>
       <div className={s.friendsWrapper}>
         {props.friends.map(friend =>
-          <Friend friend={friend} />
+          <Friend friend={friend} key={friend.id} />
         )}
       </div>
     </div>

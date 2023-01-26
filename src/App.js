@@ -1,3 +1,4 @@
+import React from "react";
 import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
@@ -23,7 +24,7 @@ const App = (props) => {
                 element={<Profile profile={props.state.profilePage} />}
               />
               <Route
-                path="/dialogs*"
+                path="/dialogs/*"
                 element={<Dialogs messages={props.state.dialogsPage} />}
               />
             </Routes>

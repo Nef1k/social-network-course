@@ -9,7 +9,7 @@ const MyPosts = (props) => {
       <NewPost />
       <div className={s.posts}>
         { props.posts.map((post) => {
-          return <Post post={post} />;
+          return <Post post={post} key={post.id} />;
         })}
         {/*<Post message="Post 1" likesCount="22" />*/}
         {/*<Post message="Post 2" likesCount="19" />*/}

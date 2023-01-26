@@ -3,7 +3,7 @@ import s from './StyledButton.module.css';
 
 const StyledButton = (props) => {
   return (
-    <button>{ props.text }</button>
+    <button onClick={props.onClick}>{ props.text }</button>
   );
 }
 
