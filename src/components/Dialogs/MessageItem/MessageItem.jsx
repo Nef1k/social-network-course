@@ -5,10 +5,10 @@ const MessageItem = (props) => {
   return (
     <div className={s.wrapper}>
       <div className={s.imageWrapper}>
-        <img src={props.profilePicture} alt="Avatar"/>
+        <img src={props.message.profilePicture} alt="Avatar"/>
       </div>
       <div className={s.messageWrapper}>
-        {props.messageText}
+        {props.message.messageText}
       </div>
       <div className={s.timeWrapper}>
         17:03

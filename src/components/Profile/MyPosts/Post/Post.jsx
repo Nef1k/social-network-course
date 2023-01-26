@@ -6,8 +6,8 @@ const Post = (props) => {
     <div className={s.post}>
       <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745" alt="Avatar"/>
       <div className={s.contentWrapper}>
-        <div className={s.message}>{ props.message }</div>
-        <div className={s.likes}>{ props.likesCount } Likes</div>
+        <div className={s.message}>{ props.post.message }</div>
+        <div className={s.likes}>{ props.post.likesCount } Likes</div>
       </div>
     </div>
   );

@@ -4,12 +4,12 @@ import StyledNavLink from "../../Utils/StyledNavLink";
 
 const DialogItem = (props) => {
   return (
-    <StyledNavLink className={s.dialogItem} to={`/dialogs/${props.dialogId}`} activeClassName={s.active}>
+    <StyledNavLink className={s.dialogItem} to={`/dialogs/${props.dialog.id}`} activeClassName={s.active}>
       <div className={s.avatar}>
-        <img src={props.imgSrc} alt=""/>
+        <img src={props.dialog.imgSrc} alt=""/>
       </div>
       <div className={s.name}>
-        {props.firstName} {props.lastName}
+        {props.dialog.firstName} {props.dialog.lastName}
       </div>
     </StyledNavLink>
   );

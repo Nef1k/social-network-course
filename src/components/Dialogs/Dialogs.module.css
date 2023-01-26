@@ -38,13 +38,12 @@
 
     padding: 20px;
 
-    max-height: 600px;
+    max-height: 800px;
 }
 
 .newMessageWrapper {
     min-height: 60px;
     background: #f8f7f5;
-    padding: 20px;
     align-self: stretch;
     border: 1px solid #ebeae6;
 }
