@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 const state = {
   common: {
     friends: [
@@ -42,5 +44,16 @@ const state = {
     ],
   },
 };
+
+export function addNewPost(postMessage) {
+  const newPost = {
+    id: 5,
+    message: postMessage,
+    likesCount: 3424,
+  }
+
+  state.profilePage.posts.push(newPost);
+  rerenderEntireTree(state);
+}
 
 export default state;

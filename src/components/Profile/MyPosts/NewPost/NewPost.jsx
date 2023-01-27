@@ -5,6 +5,7 @@ import StyledTextArea from "../../../Utils/TextArea/StyledTextArea";
 
 function NewPost(props) {
   function handleClick() {
+    props.addNewPost("asdfasdf");
   }
 
   return (
