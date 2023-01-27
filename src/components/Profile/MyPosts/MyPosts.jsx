@@ -6,7 +6,7 @@ import NewPost from "./NewPost/NewPost";
 const MyPosts = (props) => {
   return (
     <div>
-      <NewPost addNewPost={props.addNewPost} />
+      <NewPost addNewPost={props.addNewPost} newPostText={props.newPostText} changeNewPostText={props.changeNewPostText} />
       <div className={s.posts}>
         { props.posts.map((post) => {
           return <Post post={post} key={post.id} />;

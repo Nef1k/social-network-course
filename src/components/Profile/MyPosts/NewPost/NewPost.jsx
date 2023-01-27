@@ -5,12 +5,16 @@ import StyledTextArea from "../../../Utils/TextArea/StyledTextArea";
 
 function NewPost(props) {
   function handleClick() {
-    props.addNewPost("asdfasdf");
+    props.addNewPost();
+  }
+
+  function handleChange(e) {
+    props.changeNewPostText(e.target.value);
   }
 
   return (
     <div className={s.newPost}>
-      <StyledTextArea placeholder="What's up?"></StyledTextArea>
+      <StyledTextArea placeholder="What's up?" onChange={handleChange} value={props.newPostText}></StyledTextArea>
       <div className={s.controls}>
         <StyledButton text="Add Post" onClick={handleClick} />
       </div>

@@ -42,17 +42,25 @@ const state = {
       {id: 3, message: "Post 3", likesCount: 3412},
       {id: 4, message: "Post 4", likesCount: 6752}
     ],
+    newPostText: "",
   },
 };
 
-export function addNewPost(postMessage) {
+export function addNewPost() {
   const newPost = {
     id: 5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likesCount: 3424,
   }
 
+  state.profilePage.newPostText = "";
+
   state.profilePage.posts.push(newPost);
+  rerenderEntireTree(state);
+}
+
+export function changeNewPostText(newText) {
+  state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
 }
 
