@@ -8,6 +8,9 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Friends from "./components/Friends/Friends";
 
 const App = (props) => {
+  console.log(props.store);
+  const friends = props.store.getState().common.friends;
+
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -15,17 +18,24 @@ const App = (props) => {
         <div className="content-wrapper">
           <div className="sidebar">
             <Navbar/>
-            <Friends friends={props.state.common.friends} />
+            <Friends friends={friends}/>
           </div>
           <div className="content">
             <Routes>
               <Route
                 path="/"
-                element={<Profile profilePage={props.state.profilePage} addNewPost={props.addNewPost} changeNewPostText={props.changeNewPostText} />}
+                element={
+                  <Profile
+                    store={props.store}
+                    // profilePage={props.store.getState().profilePage}
+                    // addNewPost={props.store.addNewPost}
+                    // changeNewPostText={props.store.changeNewPostText}
+                  />
+                }
               />
               <Route
                 path="/dialogs/*"
-                element={<Dialogs messages={props.state.dialogsPage} />}
+                element={<Dialogs messages={props.store.getState().dialogsPage}/>}
               />
             </Routes>
           </div>
