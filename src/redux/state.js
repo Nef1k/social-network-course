@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = () => {
+  console.log("State has been changed");
+};
 
 const state = {
   common: {
@@ -22,14 +24,16 @@ const state = {
       {id: "10", firstName: "Jenkins", lastName: "Blaese", imgSrc: "https://i.imgur.com/djnn3nh.png"}
     ],
     messages: [
-      {messageText: "Message Item 1", profilePicture: "https://i.imgur.com/SBVRczc.png"},
-      {messageText: "Message Item 2", profilePicture: "https://i.imgur.com/SBVRczc.png"},
+      {id: "1", messageText: "Message Item 1", profilePicture: "https://i.imgur.com/SBVRczc.png"},
+      {id: "2", messageText: "Message Item 2", profilePicture: "https://i.imgur.com/SBVRczc.png"},
       {
+        id: "3",
         messageText: "Message Item 3",
         profilePicture: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
       },
-      {messageText: "Message Item 4", profilePicture: "https://i.imgur.com/SBVRczc.png"},
+      {id: "4", messageText: "Message Item 4", profilePicture: "https://i.imgur.com/SBVRczc.png"},
       {
+        id: "5",
         messageText: "Message Item 5",
         profilePicture: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
       },
@@ -62,6 +66,10 @@ export function addNewPost() {
 export function changeNewPostText(newText) {
   state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
+}
+
+export function subscribe(observer) {
+  rerenderEntireTree = observer;
 }
 
 export default state;

@@ -10,13 +10,13 @@ const Dialogs = (props) => {
     <div className={s.dialogs}>
       <div className={s.dialogItems}>
         {props.messages.dialogs.map((dialog =>
-          <DialogItem dialog={dialog} />
+          <DialogItem dialog={dialog} key={dialog.id} />
         ))}
       </div>
       <div className={s.messages}>
         <div className={s.messageItems}>
           {props.messages.messages.map((message =>
-            <MessageItem message={message} />
+            <MessageItem message={message} key={message.id} />
           ))}
         </div>
         <div className={s.newMessageWrapper}>
