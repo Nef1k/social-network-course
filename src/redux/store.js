@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 const store = {
   _subscribers: {
@@ -43,6 +45,7 @@ const store = {
           profilePicture: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
         },
       ],
+      newMessageText: "",
     },
     profilePage: {
       posts: [
@@ -54,8 +57,20 @@ const store = {
       newPostText: "",
     },
   },
+
   getState() {
     return this._state
+  },
+  dispatch(action) { // e.g. action = { type: 'ADD-POST' }
+    if (action.type === ADD_POST) {
+      this._addNewPost();
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
+      this._changeNewPostText(action.newPostText);
+    } else if (action.type === ADD_MESSAGE) {
+      this._addNewMessage();
+    } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+      this._changeNewMessageText(action.newMessageText);
+    }
   },
   subscribeUpdater(observer) {
     this._subscribers.updater = observer;
@@ -73,22 +88,38 @@ const store = {
     this._state.profilePage.posts.push(newPost);
     this._subscribers.updater();
   },
+  _addNewMessage() {
+    const newMessage = {
+      id: "12",
+      messageText: this._state.dialogsPage.newMessageText,
+      profilePicture: "https://i.imgur.com/SBVRczc.png"
+    }
+
+    this._state.dialogsPage.newMessageText = "";
+
+    this._state.dialogsPage.messages.push(newMessage);
+    this._subscribers.updater();
+  },
   _changeNewPostText(newText) {
     this._state.profilePage.newPostText = newText;
     this._subscribers.updater();
   },
 
-  dispatch(action) { // e.g. action = { type: 'ADD-POST' }
-    if (action.type === ADD_POST){
-      this._addNewPost();
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      this._changeNewPostText(action.newPostText);
-    }
+  _changeNewMessageText(newText) {
+    this._state.dialogsPage.newMessageText = newText;
+    this._subscribers.updater();
   },
 }
 
 export const addPostActionCreator = () => ({type: ADD_POST});
 
 export const updateNewPostTextActionCreator = (newText) => ({type: UPDATE_NEW_POST_TEXT, newPostText: newText});
+
+export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
+
+export const updateNewMessageTextActionCreator = (newText) => ({
+  type: UPDATE_NEW_MESSAGE_TEXT,
+  newMessageText: newText
+});
 
 export default store;
