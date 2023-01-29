@@ -10,10 +10,6 @@ const Profile = (props) => {
       <div className={s.posts}>
         <MyPosts
           store={props.store}
-          // posts={props.store.getState().profilePage.posts}
-          // newPostText={props.store.getState().profilePage.newPostText}
-          // addNewPost={props.store.addNewPost}
-          // changeNewPostText={props.store.changeNewPostText}
         />
       </div>
     </div>

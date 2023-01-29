@@ -5,11 +5,16 @@ import StyledTextArea from "../../../Utils/TextArea/StyledTextArea";
 
 function NewPost(props) {
   function handleClick() {
-    props.store.addNewPost();
+    props.store.dispatch({
+      type: 'ADD-POST',
+    });
   }
 
   function handleChange(e) {
-    props.store.changeNewPostText(e.target.value);
+    props.store.dispatch({
+      type: 'UPDATE-NEW-POST-TEXT',
+      newPostText: e.target.value,
+    })
   }
 
   return (

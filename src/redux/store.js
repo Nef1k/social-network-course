@@ -54,7 +54,11 @@ const store = {
   getState() {
     return this._state
   },
-  addNewPost() {
+  subscribeUpdater(observer) {
+    this._subscribers.updater = observer;
+  },
+
+  _addNewPost() {
     const newPost = {
       id: 5,
       message: this._state.profilePage.newPostText,
@@ -66,16 +70,18 @@ const store = {
     this._state.profilePage.posts.push(newPost);
     this._subscribers.updater();
   },
-  changeNewPostText(newText) {
-    console.log(this);
+  _changeNewPostText(newText) {
     this._state.profilePage.newPostText = newText;
     this._subscribers.updater();
   },
-  subscribeUpdater(observer) {
-    this._subscribers.updater = observer;
-  }
-}
 
-window.store = store;
+  dispatch(action) { // e.g. action = { type: 'ADD-POST' }
+    if (action.type === 'ADD-POST'){
+      this._addNewPost();
+    } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+      this._changeNewPostText(action.newPostText);
+    }
+  },
+}
 
 export default store;
